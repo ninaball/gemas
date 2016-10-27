@@ -1,15 +1,14 @@
 source 'https://rubygems.org/gems/'
 
-
 ruby '2.2.1'
 gem 'rails', '4.2.7.1'
 
 gem 'active_presenter', '4.1.5'
-gem 'activeresource', '4.0.0'
-gem 'responders', '2.1.0'
+gem 'activeresource', '4.1.0'
+gem 'responders', '2.3.0'
 
 # json template api
-gem 'rabl', '0.11.6'
+gem 'rabl', '0.13.1'
 
 # I18n database fields models
 gem 'globalize', '5.0.1'
@@ -49,7 +48,7 @@ gem 'bootstrap-switch-rails', '3.3.3'
 gem 'font-awesome-rails', '4.4.0.0'
 gem 'i18n-js', '3.0.0.rc14'
 gem 'momentjs-rails', '>= 2.8.1'
-gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
+gem 'bootstrap3-datetimepicker-rails', '4.17.42'
 gem 'bootstrap-datepicker-rails'
 
 # gem 'introjs-rails', '1.0.0'
@@ -66,7 +65,7 @@ gem 'kaminari', '0.16.2'
 gem 'factory_girl_rails', '4.5.0'
 
 # Active Record Nesting
-gem 'awesome_nested_set', '3.0.2'
+gem 'awesome_nested_set', '3.1.1'
 gem 'the_sortable_tree', '2.5.0'
 
 gem 'draper', '1.4.0'
@@ -79,14 +78,14 @@ gem 'connection_pool', '~> 2.2'
 #group :assets do
 # CSS related
 gem 'sass-rails', '5.0.3'
-gem 'compass-rails', '3.0.0'
-gem 'bootstrap-sass', '3.3.4.1'
+gem 'compass-rails', '3.0.2'
+gem 'bootstrap-sass', '3.3.7'
 
 # Javascript related
-gem 'coffee-rails', '4.1.0'
+gem 'coffee-rails', '4.2.1'
 
 # Hardcoded tu fix http://youtrack.vc.datys.cu/issue/BEE-994
-gem 'coffee-script-source', '~>1.8.0'
+gem 'coffee-script-source', '~>1.10.0'
 
 #TODO may be upgraded to 4.0.3
 gem 'jquery-rails', '4.2.1' #jquery 1.10.2
@@ -96,15 +95,14 @@ gem 'jquery-cookie-rails', '1.3.1.1'
 gem 'scrollToFixed_rails', '1.0.5'
 
 #icheck
-gem 'icheck-rails', '1.0.2.1'
+gem 'icheck-rails', '1.0.2.2'
 
 # Compression
-gem 'uglifier', '2.7.2'
-
+gem 'uglifier', '3.0.3'
 
 gem 'therubyracer', :platforms => :ruby
 
-gem 'sprockets', '3.7.0'
+gem 'sprockets', '2.12.4'
 
 #client side template library
 gem 'haml_coffee_assets', '1.16.2'
@@ -143,7 +141,7 @@ end
 
 group :development do
   # Preloading environment
-  gem 'spring', '1.3.6'
+  gem 'spring', '2.0.0'
   gem 'spring-commands-rspec', '1.0.4'
   gem 'spring-commands-cucumber', '1.0.1'
   gem 'rb-inotify', '0.9.5', :require => false
@@ -185,7 +183,7 @@ group :production, :staging do
 end
 
 group :test, :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '3.5.2'
   gem 'rspec-collection_matchers', '1.1.2'
 
   # RSpec matchers and Cucumber steps for testing JSON content
@@ -195,9 +193,9 @@ group :test, :development do
   gem 'teaspoon-jasmine'
 
   # I18n verifications
-  gem 'i18n-tasks', '0.9.4'
+  gem 'i18n-tasks', '0.9.5'
   #HACK TO AVOID ERROR ON I18N-TASK WITH SLOP 4.0 DEPENDENCY
-  gem 'slop', '~> 3.5'
+  gem 'slop', '~> 4.4'
   gem 'axlsx', '2.0.1'
 
   # metrics dependencies
@@ -227,7 +225,7 @@ gem 'gon', '5.2.3'
 
 gem 'render-q-mithril', '0.0.70'
 gem 'amoeba', '3.0.0'
-gem 'acts_as_list', '0.6.0'
+gem 'acts_as_list', '0.8.2'
 
 gem 'public_activity', '1.4.2'
 #date ranges validation
@@ -260,10 +258,10 @@ gem 'redis-session-store', '0.9.1'
 # JSON Api creator
 gem 'grape', '0.11.0'
 
-gem 'rack-mini-profiler', '0.9.2', :groups => [:development, :staging], require: false
+gem 'rack-mini-profiler', '0.10.1', :groups => [:development, :staging], require: false
 gem 'friendly_id', '5.1.0'
-gem 'acts-as-taggable-on', '~> 3.4.3'
-gem 'bootstrap_sortable_rails', '1.8.0'
+gem 'acts-as-taggable-on', '~> 4.0.0'
+gem 'bootstrap_sortable_rails', '1.11.2'
 gem 'activerecord-deprecated_finders'
 gem 'rails_admin', '1.0.0'
 gem 'rails_admin_globalize_field', '0.4.0'
@@ -286,4 +284,3 @@ gem 'bson', '3.1.1'
 gem 'simple_captcha2', require: 'simple_captcha'
 
 gem 'sequenced', '3.1.1'
-
