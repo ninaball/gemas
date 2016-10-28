@@ -31,7 +31,7 @@ gem 'secure_headers', '2.0.0'
 gem 'six', '0.2.0'
 
 # Misc
-gem 'enumerize', '0.9.0' # AR enumerations
+gem 'enumerize', '2.0.1' # AR enumerations
 # Background jobs processing
 gem 'sidekiq-logging-json-datys', '0.0.14'
 gem 'sinatra', '1.4.5', :require => nil
@@ -68,7 +68,7 @@ gem 'factory_girl_rails', '4.5.0'
 gem 'awesome_nested_set', '3.1.1'
 gem 'the_sortable_tree', '2.5.0'
 
-gem 'draper', '1.4.0'
+gem 'draper', '2.1.0'
 
 gem 'rails-timeago', '~> 2.0'
 
@@ -218,7 +218,7 @@ group :test, :development do
   gem 'parallel_tests', '1.3.9'
 end
 
-gem 'dotenv-rails', '1.0.2' # Configuration
+gem 'dotenv-rails', '2.1.1' # Configuration
 gem 'gon', '5.2.3'
 
 #TODO revisar ultima version estable
@@ -231,6 +231,8 @@ gem 'public_activity', '1.4.2'
 #date ranges validation
 gem 'validates_overlap', '0.5.0'
 gem 'rake', '10.4.2'
+
+
 
 # Multi tenant
 #TODO este se puede actualizar
