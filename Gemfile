@@ -25,7 +25,7 @@ gem 'net-ldap', '0.14.0'
 
 # Security
 gem 'rack-attack', '5.0.1'
-gem 'secure_headers', '3.4.1'
+gem 'secure_headers', '2.5.2'
 
 # Authorization
 gem 'six', '0.2.0'
@@ -235,7 +235,6 @@ gem 'rake', '11.3.0'
 # Multi tenant
 #TODO este se puede actualizar
 gem 'apartment', '1.2.0' # active record multi-tenant
-
 gem 'redis-namespace', '1.5.2' # redis multi-tenant
 
 gem 'seedbank', '0.4.0'
