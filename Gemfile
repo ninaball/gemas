@@ -24,8 +24,8 @@ gem 'devise_security_extension', '0.9.2'
 gem 'net-ldap', '0.14.0'
 
 # Security
-gem 'rack-attack', '4.3.1'
-gem 'secure_headers', '2.0.0'
+gem 'rack-attack', '5.0.1'
+gem 'secure_headers', '3.4.1'
 
 # Authorization
 gem 'six', '0.2.0'
@@ -40,12 +40,12 @@ gem 'configurations', '2.0.0' # Configurations
 
 ##gem 'stamp', '0.5.0' # Format dates
 
-gem 'simple_form', '3.2.0' # Form helpers
+gem 'simple_form', '3.3.1' # Form helpers
 
-gem 'pnotify-rails', '2.0.1.1'
-gem 'unobtrusive_flash', '3.1.0'
+gem 'pnotify-rails', '3.0.0'
+gem 'unobtrusive_flash', '3.2.0'
 gem 'bootstrap-switch-rails', '3.3.3'
-gem 'font-awesome-rails', '4.4.0.0'
+gem 'font-awesome-rails', '4.7.0.0'
 gem 'i18n-js', '3.0.0.rc14'
 gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '4.17.42'
@@ -55,18 +55,18 @@ gem 'bootstrap-datepicker-rails'
 
 #  Views
 gem 'hamlit-rails', '0.1.0'
-gem 'hamlit', '2.6.1'
+gem 'hamlit', '2.7.5'
 
 gem 'infinitescrolling-rails', '0.3.0'
 
 gem 'pjax_rails', '0.4.0'
 gem 'kaminari', '0.16.2'
 
-gem 'factory_girl_rails', '4.5.0'
+gem 'factory_girl_rails', '4.7.0'
 
 # Active Record Nesting
 gem 'awesome_nested_set', '3.1.1'
-gem 'the_sortable_tree', '2.5.0'
+gem 'the_sortable_tree', '2.6.1'
 
 gem 'draper', '2.1.0'
 
@@ -77,7 +77,7 @@ gem 'connection_pool', '~> 2.2'
 
 #group :assets do
 # CSS related
-gem 'sass-rails', '5.0.3'
+gem 'sass-rails', '5.0.6'
 gem 'compass-rails', '3.0.2'
 gem 'bootstrap-sass', '3.3.7'
 
@@ -174,7 +174,7 @@ group :development, :staging do
 end
 
 group :production, :staging do
-  gem 'unicorn', '5.0.0', :platforms => [:ruby]
+  gem 'unicorn', '5.1.0', :platforms => [:ruby]
   gem 'puma', '3.6.0', platforms: [:ruby], require: false
   gem 'thin', require: false
   #TODO la version 0.18.1 funciona en rails 4.2.1
@@ -227,19 +227,18 @@ gem 'render-q-mithril', '0.0.70'
 gem 'amoeba', '3.0.0'
 gem 'acts_as_list', '0.8.2'
 
-gem 'public_activity', '1.4.2'
+gem 'public_activity', '1.5.0'
 #date ranges validation
-gem 'validates_overlap', '0.5.0'
-gem 'rake', '10.4.2'
-
-
+gem 'validates_overlap', '0.6.0'
+gem 'rake', '11.3.0'
 
 # Multi tenant
 #TODO este se puede actualizar
 gem 'apartment', '1.2.0' # active record multi-tenant
+
 gem 'redis-namespace', '1.5.2' # redis multi-tenant
 
-gem 'seedbank', '0.3.0'
+gem 'seedbank', '0.4.0'
 gem 'redcarpet', '3.3.4' # Markdown
 
 # License
@@ -269,7 +268,7 @@ gem 'rails_admin', '1.0.0'
 gem 'rails_admin_globalize_field', '0.4.0'
 
 # Log publishing
-gem 'logstasher', '0.6.2'
+gem 'logstasher', '1.0.1'
 # gem 'logstash-logger', '0.8.0'
 # gem 'lograge', '0.3.1'
 # gem 'logstash-event', '1.2.02'
@@ -277,7 +276,7 @@ gem 'logstasher', '0.6.2'
 gem 'datys-time_will_tell'
 gem 'mongoid-grid_fs'
 gem 'rubyzip'
-gem 'yaml_db', '0.3.0'
+gem 'yaml_db', '0.4.2'
 
 gem 'pluck_to_hash'
 # Version 3.1.2 is available but can not upload a zip to gridfs with this
