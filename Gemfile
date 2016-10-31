@@ -1,5 +1,6 @@
 source 'https://rubygems.org/gems/'
 
+
 ruby '2.2.1'
 gem 'rails', '4.2.7.1'
 
@@ -13,7 +14,7 @@ gem 'rabl', '0.13.1'
 # I18n database fields models
 gem 'globalize', '5.0.1'
 gem 'language_list', '1.0.0'
-gem 'globalize-accessors', '0.1.5'
+gem 'globalize-accessors', '0.2.1'
 gem 'rails-i18n', '~> 4.0.3'
 
 # Authentication
@@ -25,7 +26,7 @@ gem 'net-ldap', '0.14.0'
 
 # Security
 gem 'rack-attack', '5.0.1'
-gem 'secure_headers', '2.5.2'
+gem 'secure_headers', '2.0.0'
 
 # Authorization
 gem 'six', '0.2.0'
@@ -36,7 +37,7 @@ gem 'enumerize', '2.0.1' # AR enumerations
 gem 'sidekiq-logging-json-datys', '0.0.14'
 gem 'sinatra', '1.4.5', :require => nil
 
-gem 'configurations', '2.0.0' # Configurations
+gem 'configurations', '2.2.1' # Configurations
 
 ##gem 'stamp', '0.5.0' # Format dates
 
@@ -60,7 +61,7 @@ gem 'hamlit', '2.7.5'
 gem 'infinitescrolling-rails', '0.3.0'
 
 gem 'pjax_rails', '0.4.0'
-gem 'kaminari', '0.16.2'
+gem 'kaminari', '0.17.0'
 
 gem 'factory_girl_rails', '4.7.0'
 
@@ -99,6 +100,7 @@ gem 'icheck-rails', '1.0.2.2'
 
 # Compression
 gem 'uglifier', '3.0.3'
+
 
 gem 'therubyracer', :platforms => :ruby
 
@@ -246,17 +248,17 @@ gem 'lic_provider', '0.3.3'
 # redis cache
 gem 'redis', '3.3.1'
 gem 'redis-store', '1.2.0'
-gem 'redis-rails'
-gem 'redis-activesupport'
-gem 'redis-actionpack'
-gem 'redis-rack', '2.0.0.pre'
-gem 'redis-rack-cache', '2.0.0.pre'
+gem 'redis-rails','5.0.1'
+gem 'redis-activesupport','5.0.1'
+gem 'redis-actionpack','5.0.0'
+gem 'redis-rack','2.0.0.pre'
+gem 'redis-rack-cache','2.0.0.pre'
 gem 'rack-cache', '1.6.1'
 # Better session storage support
 gem 'redis-session-store', '0.9.1'
 
 # JSON Api creator
-gem 'grape', '0.11.0'
+gem 'grape', '0.17.0'
 
 gem 'rack-mini-profiler', '0.10.1', :groups => [:development, :staging], require: false
 gem 'friendly_id', '5.1.0'
