@@ -24,7 +24,7 @@ gem 'devise_security_extension', '0.9.2'
 gem 'net-ldap', '0.14.0'
 
 # Security
-#gem 'rack-attack', '4.3.1'
+gem 'rack-attack', '4.3.1'
 gem 'secure_headers', '2.4.4'
 
 # Authorization
