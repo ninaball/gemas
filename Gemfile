@@ -84,7 +84,6 @@ gem 'bootstrap-sass', '3.3.7'
 # Javascript related
 gem 'coffee-rails', '4.2.1'
 
-# Hardcoded tu fix http://youtrack.vc.datys.cu/issue/BEE-994
 gem 'coffee-script-source', '~>1.10.0'
 
 #TODO may be upgraded to 4.0.3
