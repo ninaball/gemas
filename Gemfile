@@ -33,7 +33,6 @@ gem 'six', '0.2.0'
 # Misc
 gem 'enumerize', '2.0.1' # AR enumerations
 # Background jobs processing
-gem 'sidekiq-logging-json-datys', '0.0.14'
 gem 'sinatra', '1.4.5', :require => nil
 
 gem 'configurations', '2.2.1' # Configurations
@@ -120,7 +119,6 @@ group :test do
   # Next gem is commented because of the downgrade of cucumber to 1.3
   # due to parallel test and cucumber rerun problems
 
-  # Cucumber rails was patched on datys because atm of writting version 1.4.2
   # didn't support cucumber 2.0.0
   # gem 'cucumber-rails', '1.4.2.1', :require => false
 
@@ -270,7 +268,6 @@ gem 'logstasher', '0.6.2'
 # gem 'lograge', '0.3.1'
 # gem 'logstash-event', '1.2.02'
 
-gem 'datys-time_will_tell'
 gem 'mongoid-grid_fs'
 gem 'rubyzip'
 gem 'yaml_db', '0.3.0'
