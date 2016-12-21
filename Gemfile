@@ -1,6 +1,6 @@
 source "https://rubygems.org/"
 
-ruby '2.3.1'
+ruby '2.2.1'
 gem 'rails', '4.2.7.1'
 
 gem 'active_presenter', '4.1.5'
@@ -25,7 +25,7 @@ gem 'net-ldap', '0.14.0'
 
 # Security
 gem 'rack-attack', '4.3.1'
-gem 'secure_headers', '2.0.0'
+gem 'secure_headers', '2.4.4'
 
 # Authorization
 gem 'six', '0.2.0'
@@ -33,7 +33,7 @@ gem 'six', '0.2.0'
 # Misc
 gem 'enumerize', '2.0.1' # AR enumerations
 # Background jobs processing
-gem 'sinatra', '1.4.5', :require => nil
+gem 'sinatra', '1.4.7', :require => nil
 
 gem 'configurations', '2.2.1' # Configurations
 
@@ -124,7 +124,7 @@ group :test do
 
   # gem 'launchy', '2.4.3'
   # gem 'konacha', '3.3.0' # Javascript test with mocha framework
-  gem 'simplecov', '0.9.1', :require => false # Test coverage
+  gem 'simplecov', '0.12.0', :require => false # Test coverage
   gem 'simplecov-rcov', '0.2.3', :require => false # Test coverage
   gem 'shoulda-matchers', '2.7.0', :require => false # AR validation testing
   gem 'enumerize-matchers', '0.0.2' # Enumerize validation
@@ -141,8 +141,8 @@ group :development do
   gem 'spring', '2.0.0'
   gem 'spring-commands-rspec', '1.0.4'
   gem 'spring-commands-cucumber', '1.0.1'
-  gem 'rb-inotify', '0.9.5', :require => false
-  gem 'rb-fsevent', '0.9.4', :require => false
+  gem 'rb-inotify', '0.9.7', :require => false
+  gem 'rb-fsevent', '0.9.8', :require => false
   gem 'rb-fchange', '0.0.6', :require => false
   gem 'libnotify' if /linux/ =~ RUBY_PLATFORM
 
@@ -152,7 +152,7 @@ group :development do
   gem 'quiet_assets'
 
   # Code quality
-  gem 'lol_dba', '1.6.4' #Db Index discovery
+  gem 'lol_dba', '2.1.1' #Db Index discovery
 
   # misc
   gem 'colored', '1.2' # Colored output to console
@@ -167,7 +167,7 @@ group :development do
 end
 
 group :development, :staging do
-  gem 'bullet', '4.14.2' #Detect N+1 query and eager loading
+  gem 'bullet', '5.4.2' #Detect N+1 query and eager loading
 end
 
 group :production, :staging do
@@ -211,15 +211,15 @@ group :test, :development do
   #TODO poner y revisar compatibilidad
   # gem 'scss-lint', '0.30.0', require: false
   gem 'pronto-coffeelint', require: false
-  gem 'faker', '1.4.3'
-  gem 'parallel_tests', '1.3.9'
+  gem 'faker', '1.6.6'
+  gem 'parallel_tests', '2.10.0'
 end
 
 gem 'dotenv-rails', '2.1.1' # Configuration
 gem 'gon', '5.2.3'
 
 #TODO revisar ultima version estable
-gem 'render-q-mithril', '0.0.70'
+gem 'render-q-mithril', '0.0.71'
 gem 'amoeba', '3.0.0'
 gem 'acts_as_list', '0.8.2'
 
@@ -263,14 +263,15 @@ gem 'rails_admin', '1.0.0'
 gem 'rails_admin_globalize_field', '0.4.0'
 
 # Log publishing
-gem 'logstasher', '0.6.2'
+gem 'logstasher', '1.1.0'
 # gem 'logstash-logger', '0.8.0'
 # gem 'lograge', '0.3.1'
 # gem 'logstash-event', '1.2.02'
 
 gem 'mongoid-grid_fs'
+gem 'moped', '2.0.7'
 gem 'rubyzip'
-gem 'yaml_db', '0.3.0'
+gem 'yaml_db', '0.4.0'
 
 gem 'pluck_to_hash'
 # Version 3.1.2 is available but can not upload a zip to gridfs with this
@@ -281,5 +282,3 @@ gem 'simple_captcha2', require: 'simple_captcha'
 gem 'sequenced', '3.1.1'
 
 gem 'puma_worker_killer'
-
-gem 'htmlentities'
