@@ -194,6 +194,7 @@ group :test, :development do
   #HACK TO AVOID ERROR ON I18N-TASK WITH SLOP 4.0 DEPENDENCY
   gem 'slop', '~> 4.4'
   gem 'axlsx', '2.0.1'
+  gem 'axlsx_rails'
 
   # metrics dependencies
   gem 'brakeman', '3.1.5', require: false
@@ -219,7 +220,7 @@ gem 'dotenv-rails', '2.1.1' # Configuration
 gem 'gon', '5.2.3'
 
 #TODO revisar ultima version estable
-gem 'render-q-mithril', '0.0.71'
+gem 'render-q-mithril', '0.0.72'
 gem 'amoeba', '3.0.0'
 gem 'acts_as_list', '0.8.2'
 
