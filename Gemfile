@@ -36,7 +36,6 @@ gem 'enumerize', '2.0.1' # AR enumerations
 gem 'sinatra', '1.4.7', require: nil
 
 gem 'configurations', '2.2.1' # Configurations
-gem 'datys-time_will_tell'
 ##gem 'stamp', '0.5.0' # Format dates
 
 gem 'simple_form', '3.2.0' # Form helpers
@@ -83,7 +82,6 @@ gem 'bootstrap-sass', '3.3.7'
 # Javascript related
 gem 'coffee-rails', '4.2.1'
 
-# Hardcoded tu fix http://youtrack.vc.datys.cu/issue/BEE-994
 gem 'coffee-script-source', '~>1.10.0'
 
 #TODO may be upgraded to 4.0.3
@@ -93,7 +91,6 @@ gem 'jquery-cookie-rails', '1.3.1.1'
 # fixed on top when scroll
 gem 'scrollToFixed_rails', '1.0.5'
 
-#icheckgem 'datys-time_will_tell'
 gem 'icheck-rails', '1.0.2.2'
 
 # Compression
@@ -120,7 +117,6 @@ group :test do
   # Next gem is commented because of the downgrade of cucumber to 1.3
   # due to parallel test and cucumber rerun problems
 
-  # Cucumber rails was patched on datys because atm of writting version 1.4.2
   # didn't support cucumber 2.0.0
   # gem 'cucumber-rails', '1.4.2.1', :require => false
 
