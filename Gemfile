@@ -33,10 +33,10 @@ gem 'six', '0.2.0'
 # Misc
 gem 'enumerize', '2.0.1' # AR enumerations
 # Background jobs processing
-gem 'sinatra', '1.4.7', :require => nil
+gem 'sinatra', '1.4.7', require: nil
 
 gem 'configurations', '2.2.1' # Configurations
-
+gem 'datys-time_will_tell'
 ##gem 'stamp', '0.5.0' # Format dates
 
 gem 'simple_form', '3.2.0' # Form helpers
@@ -44,7 +44,7 @@ gem 'simple_form', '3.2.0' # Form helpers
 gem 'pnotify-rails', '2.0.1.1'
 gem 'unobtrusive_flash', '3.1.0'
 gem 'bootstrap-switch-rails', '3.3.3'
-gem 'font-awesome-rails', '4.4.0.0'
+gem 'font-awesome-rails', '4.7.0.1'
 gem 'i18n-js', '2.1.2'
 gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
@@ -83,6 +83,7 @@ gem 'bootstrap-sass', '3.3.7'
 # Javascript related
 gem 'coffee-rails', '4.2.1'
 
+# Hardcoded tu fix http://youtrack.vc.datys.cu/issue/BEE-994
 gem 'coffee-script-source', '~>1.10.0'
 
 #TODO may be upgraded to 4.0.3
@@ -92,13 +93,13 @@ gem 'jquery-cookie-rails', '1.3.1.1'
 # fixed on top when scroll
 gem 'scrollToFixed_rails', '1.0.5'
 
-#icheck
+#icheckgem 'datys-time_will_tell'
 gem 'icheck-rails', '1.0.2.2'
 
 # Compression
 gem 'uglifier', '3.0.3'
 
-gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer', platforms: :ruby
 
 gem 'sprockets', '2.12.4'
 
@@ -119,14 +120,15 @@ group :test do
   # Next gem is commented because of the downgrade of cucumber to 1.3
   # due to parallel test and cucumber rerun problems
 
+  # Cucumber rails was patched on datys because atm of writting version 1.4.2
   # didn't support cucumber 2.0.0
   # gem 'cucumber-rails', '1.4.2.1', :require => false
 
   # gem 'launchy', '2.4.3'
   # gem 'konacha', '3.3.0' # Javascript test with mocha framework
-  gem 'simplecov', '0.12.0', :require => false # Test coverage
-  gem 'simplecov-rcov', '0.2.3', :require => false # Test coverage
-  gem 'shoulda-matchers', '2.7.0', :require => false # AR validation testing
+  gem 'simplecov', '0.12.0', require: false # Test coverage
+  gem 'simplecov-rcov', '0.2.3', require: false # Test coverage
+  gem 'shoulda-matchers', '2.7.0', require: false # AR validation testing
   gem 'enumerize-matchers', '0.0.2' # Enumerize validation
 
   # CI related
@@ -141,14 +143,14 @@ group :development do
   gem 'spring', '2.0.0'
   gem 'spring-commands-rspec', '1.0.4'
   gem 'spring-commands-cucumber', '1.0.1'
-  gem 'rb-inotify', '0.9.7', :require => false
-  gem 'rb-fsevent', '0.9.8', :require => false
-  gem 'rb-fchange', '0.0.6', :require => false
+  gem 'rb-inotify', '0.9.7', require: false
+  gem 'rb-fsevent', '0.9.8', require: false
+  gem 'rb-fchange', '0.0.6', require: false
   gem 'libnotify' if /linux/ =~ RUBY_PLATFORM
 
   # Better error display
   gem 'better_errors', '2.1.1'
-  gem 'binding_of_caller', '0.7.2', :platforms => [:ruby]
+  gem 'binding_of_caller', '0.7.2', platforms: [:ruby]
   gem 'quiet_assets'
 
   # Code quality
@@ -171,11 +173,11 @@ group :development, :staging do
 end
 
 group :production, :staging do
-  gem 'unicorn', '5.0.0', :platforms => [:ruby]
+  gem 'unicorn', '5.0.0', platforms: [:ruby]
   gem 'puma', '3.6.0', platforms: [:ruby], require: false
   gem 'thin', require: false
   #TODO la version 0.18.1 funciona en rails 4.2.1
-  gem 'pg', '0.18.4', :platforms => [:ruby]
+  gem 'pg', '0.18.4', platforms: [:ruby]
   gem 'rb_cipher', '1.0.0'
 end
 
@@ -214,13 +216,13 @@ group :test, :development do
   gem 'pronto-coffeelint', require: false
   gem 'faker', '1.6.6'
   gem 'parallel_tests', '2.10.0'
+  gem 'coffeelint', '1.14.0'
 end
 
 gem 'dotenv-rails', '2.1.1' # Configuration
 gem 'gon', '5.2.3'
 
-#TODO revisar ultima version estable
-gem 'render-q-mithril', '0.0.72'
+gem 'render-q-mithril', '0.0.75'
 gem 'amoeba', '3.0.0'
 gem 'acts_as_list', '0.8.2'
 
@@ -235,7 +237,7 @@ gem 'apartment', '1.2.0' # active record multi-tenant
 gem 'redis-namespace', '1.5.2' # redis multi-tenant
 
 gem 'seedbank', '0.3.0'
-gem 'redcarpet', '3.3.4' # Markdown
+gem 'redcarpet', '3.4.0' # Markdown
 
 # License
 gem 'lic_provider', '0.3.3'
@@ -255,7 +257,7 @@ gem 'redis-session-store', '0.9.1'
 # JSON Api creator
 gem 'grape', '0.11.0'
 
-gem 'rack-mini-profiler', '0.10.1', :groups => [:development, :staging], require: false
+gem 'rack-mini-profiler', '0.10.1', groups: [:development, :staging], require: false
 gem 'friendly_id', '5.1.0'
 gem 'acts-as-taggable-on', '~> 4.0.0'
 gem 'bootstrap_sortable_rails', '1.11.2'
@@ -283,3 +285,5 @@ gem 'simple_captcha2', require: 'simple_captcha'
 gem 'sequenced', '3.1.1'
 
 gem 'puma_worker_killer'
+
+gem 'tzinfo-data', '1.2016.10'
