@@ -8,7 +8,8 @@ gem 'activeresource', '4.1.0'
 gem 'responders', '2.3.0'
 
 # json template api
-gem 'rabl', '0.13.1'
+gem 'rabl', '0.14.1'
+gem 'oj', '3.7.12'
 
 # I18n database fields models
 gem 'globalize', '5.0.1'
@@ -24,7 +25,7 @@ gem 'devise_security_extension', '0.9.2'
 gem 'net-ldap', '0.14.0'
 
 # Security
-gem 'rack-attack', '4.3.1'
+gem 'rack-attack', '5.0.1'
 gem 'secure_headers', '2.4.4'
 
 # Authorization
@@ -33,9 +34,11 @@ gem 'six', '0.2.0'
 # Misc
 gem 'enumerize', '2.0.1' # AR enumerations
 # Background jobs processing
+gem 'sidekiq-unique-jobs', '5.0.10'
 gem 'sinatra', '1.4.7', require: nil
 
 gem 'configurations', '2.2.1' # Configurations
+
 ##gem 'stamp', '0.5.0' # Format dates
 
 gem 'simple_form', '3.2.0' # Form helpers
@@ -91,11 +94,14 @@ gem 'jquery-cookie-rails', '1.3.1.1'
 # fixed on top when scroll
 gem 'scrollToFixed_rails', '1.0.5'
 
+#icheck
 gem 'icheck-rails', '1.0.2.2'
 
 # Compression
 gem 'uglifier', '3.0.3'
 
+# Beesor documentation
+gem 'beesor-docs', '~>4.1.0'
 gem 'therubyracer', platforms: :ruby
 
 gem 'sprockets', '2.12.4'
@@ -117,8 +123,7 @@ group :test do
   # Next gem is commented because of the downgrade of cucumber to 1.3
   # due to parallel test and cucumber rerun problems
 
-  # didn't support cucumber 2.0.0
-  # gem 'cucumber-rails', '1.4.2.1', :require => false
+   # gem 'cucumber-rails', '1.4.2.1', :require => false
 
   # gem 'launchy', '2.4.3'
   # gem 'konacha', '3.3.0' # Javascript test with mocha framework
@@ -126,6 +131,7 @@ group :test do
   gem 'simplecov-rcov', '0.2.3', require: false # Test coverage
   gem 'shoulda-matchers', '2.7.0', require: false # AR validation testing
   gem 'enumerize-matchers', '0.0.2' # Enumerize validation
+#  gem 'rubocop', '0.47.1' # Automatic Ruby code style checking tool
 
   # CI related
   gem 'ci_reporter', '2.0.0'
@@ -170,7 +176,7 @@ end
 
 group :production, :staging do
   gem 'unicorn', '5.0.0', platforms: [:ruby]
-  gem 'puma', '3.6.0', platforms: [:ruby], require: false
+  gem 'puma', '3.12.1', platforms: [:ruby], require: false
   gem 'thin', require: false
   #TODO la version 0.18.1 funciona en rails 4.2.1
   gem 'pg', '0.18.4', platforms: [:ruby]
@@ -179,7 +185,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails', '3.5.2'
-  gem 'rspec-collection_matchers', '1.1.2'
+  gem 'rspec-collection_matchers', '1.1.3'
 
   # RSpec matchers and Cucumber steps for testing JSON content
   gem 'json_spec', '1.1.4'
@@ -218,7 +224,7 @@ end
 gem 'dotenv-rails', '2.1.1' # Configuration
 gem 'gon', '5.2.3'
 
-gem 'render-q-mithril', '0.0.75'
+gem 'render-q-mithril', '0.0.78'
 gem 'amoeba', '3.0.0'
 gem 'acts_as_list', '0.8.2'
 
@@ -236,23 +242,24 @@ gem 'seedbank', '0.3.0'
 gem 'redcarpet', '3.4.0' # Markdown
 
 # License
-gem 'lic_provider', '0.3.3'
+gem 'lic_provider', '0.3.5'
 
 # redis cache
-gem 'redis', '3.3.1'
+gem 'redis', '3.3.5'
 gem 'redis-store', '1.2.0'
-gem 'redis-rails','5.0.1'
+gem 'redis-rails','5.0.2'
 gem 'redis-activesupport','5.0.1'
-gem 'redis-actionpack','5.0.0'
-gem 'redis-rack', '2.0.0.pre'
-gem 'redis-rack-cache', '2.0.0.pre'
+gem 'redis-actionpack','5.0.2'
+gem 'redis-rack', '2.0.5'
+gem 'redis-rack-cache', '2.0.2'
 gem 'rack-cache', '1.6.1'
 # Better session storage support
-gem 'redis-session-store', '0.9.1'
+gem 'redis-session-store', '0.9.2'
 
 # JSON Api creator
 gem 'grape', '0.11.0'
 
+gem 'beesor_analytics', '1.0.4'
 gem 'rack-mini-profiler', '0.10.1', groups: [:development, :staging], require: false
 gem 'friendly_id', '5.1.0'
 gem 'acts-as-taggable-on', '~> 4.0.0'
@@ -262,7 +269,7 @@ gem 'rails_admin', '1.0.0'
 gem 'rails_admin_globalize_field', '0.4.0'
 
 # Log publishing
-gem 'logstasher', '1.1.0'
+gem 'logstasher', '1.2.1'
 # gem 'logstash-logger', '0.8.0'
 # gem 'lograge', '0.3.1'
 # gem 'logstash-event', '1.2.02'
@@ -280,6 +287,8 @@ gem 'simple_captcha2', require: 'simple_captcha'
 
 gem 'sequenced', '3.1.1'
 
-gem 'puma_worker_killer'
+gem 'puma_worker_killer', '0.1.1'
 
 gem 'tzinfo-data', '1.2016.10'
+
+gem 'exception_notification', '4.2.2'
